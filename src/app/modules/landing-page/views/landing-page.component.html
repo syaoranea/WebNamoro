@@ -8,9 +8,11 @@
         <!-- Image Logo -->
         <a class="navbar-brand logo-image zh-fs-28" href="index.html">WEBNAMORO<img src="" alt=""></a>
 
-        <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas" (click)="menuResponsivo()">
+            <span class="navbar-toggler-icon">menu</span>
         </button>
+
+        
 
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav">
@@ -40,7 +42,7 @@
     </div> <!-- end of container -->
 </nav> <!-- end of navbar -->
 <!-- end of navigation -->
-
+<app-menu-responsivel *ngIf="showMenu" [menuList]="menu"></app-menu-responsivel>
 <!-- Header -->
 <header id="header" class="header">
     <div class="container">
@@ -52,7 +54,6 @@
                 <h1 class="h1-large">Lorem Ipsum Dolor</h1>
                 <p class="p-large">Consecte tur adipiscing elit ipsum December 27 at 9:00 AM in Lorem - LI</p>
                 <a class="btn-outline-lg page-scroll" href="#registration">REGISTER</a>
-                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of container -->
