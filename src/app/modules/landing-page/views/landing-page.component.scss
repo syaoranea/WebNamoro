@@ -1,1 +1,48 @@
+.navbar {
+    background-color: #ec3258;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    border-bottom: 1px solid #f06b7f;
+    padding: 1.75rem 1rem 0.5rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .logo-image{
+        color: #ffffff;
+    }
+    .container{
+        width: 1520px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        
+        
+        .offcanvas-collapse {
+            position: static;
+            background-color: transparent;
+            overflow-y: visible;
+            .navbar-nav{
+                display: flex;
+            }
+        }
+    }
+    
+    li{
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }  
+    
+    
+}
 
+
+/* @media screen and (min-width: 992px) {
+    .navbar {
+        padding-top: 1.75rem;
+        background-color: transparent;
+        border-bottom: none;
+        transition: all 0.2s;
+    }
+} */

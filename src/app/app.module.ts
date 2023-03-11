@@ -11,7 +11,8 @@ import { LandingPageModule } from './modules/landing-page/landing-page.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LandingPageModule
+    LandingPageModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
