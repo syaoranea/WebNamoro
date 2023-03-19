@@ -35,7 +35,31 @@
         display: list-item;
         text-align: -webkit-match-parent;
     }  
+        i {
+            color: #ffffff;
+            font-size: 18px;
+            margin-right: 12px;
+            
+        }
+        .nav-item {
+            color: #f8e7eb;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            padding-bottom: 12px;
+            span{
+                display: flex;
+                margin-bottom: 12px;
+            }
+        }
     
+        .nav-item {
+            color: #ffffff;
+        }
+        button{
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
     
 }
 .header {
@@ -81,6 +105,7 @@
         bottom: 0;
         right: 0;
     }
+    
 }
 
 .fixed-top {
