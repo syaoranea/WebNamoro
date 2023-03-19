@@ -6,6 +6,8 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
+  dataFim: Date = new Date('2023-06-18T19:00:00');
+  
 
   showMenu = false;
   menu: string[] = [ "home", "registrar", "contato"]
@@ -20,6 +22,8 @@ export class LandingPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
+    
   }
 
   menuResponsivo(){

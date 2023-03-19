@@ -1,5 +1,4 @@
 .navbar {
-    background-color: #ec3258;
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 0.875rem;
@@ -36,13 +35,7 @@
         display: list-item;
         text-align: -webkit-match-parent;
     }  
-    .fixed-top {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
+    
     
 }
 .header {
@@ -50,7 +43,7 @@
     background: linear-gradient(to bottom right, rgba(236, 50, 88, 0.9), rgba(239, 100, 57, 0.9)), url(../../../../assets/nathan.jpg) center center no-repeat;
     background-size: cover;
     text-align: center;
-    height: 93vh;
+    height: 100vh;
     padding-top: 12rem;
     padding-bottom: 16rem;
     .h1-large {
@@ -90,7 +83,13 @@
     }
 }
 
-
+.fixed-top {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+        }
 @media screen and (max-width: 992px) {
     .navbar {
         background-color: transparent;
@@ -111,10 +110,8 @@
             .offcanvas-collapse {
                 visibility: hidden;
                 display: none;
-                .navbar-nav {
-            
-                }
             }
         }
     }
+        
 }
