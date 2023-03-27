@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { StateService } from '@uirouter/angular';
 
 @Component({
   selector: 'app-landing-page',
@@ -19,15 +20,20 @@ export class LandingPageComponent implements OnInit {
     console.log(`Largura da janela: ${event.target.innerWidth}`);
   }
   
-  constructor() { }
+  constructor(
+  private  stateService: StateService
+  ) { }
 
   ngOnInit(): void {
-    
     
   }
 
   menuResponsivo(){
     this.showMenu = this.showMenu ? false : true;
+  }
+
+  goToRegistrar(){
+    this.stateService.go("cadastro", {}, {location: false})
   }
 
 }

@@ -1,13 +1,17 @@
+import { LocationStrategy } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { LandingPageComponent } from './modules/landing-page/views/landing-page.component';
-
-const routes: Routes = [
-  { path: '', component: LandingPageComponent },
-];
+import { UIRouterModule } from '@uirouter/angular'
+import { environment } from 'src/environments/environment';
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [UIRouterModule.forRoot()],
+  providers: [
+    Location,
+    {
+      provide: LocationStrategy,
+      useClass: environment.locationStrategy, 
+    }
+  ],
+  exports:[UIRouterModule]
 })
 export class AppRoutingModule { }
