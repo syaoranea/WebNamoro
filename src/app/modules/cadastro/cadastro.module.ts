@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { CadastroRoutingModule } from './cadastro-routing.module';
 import { CadastroComponent } from './views/cadastro.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +15,9 @@ import { CadastroComponent } from './views/cadastro.component';
   ],
   imports: [
     CommonModule,
-    CadastroRoutingModule
+    CadastroRoutingModule,
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class CadastroModule { }
