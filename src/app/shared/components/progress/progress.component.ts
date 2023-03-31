@@ -19,6 +19,7 @@ import { Status, UiHelper } from './uiHelper';
 })
 export class ProgressComponent  extends UiHelper  implements OnInit, AfterContentInit { itemLength: number;
 
+  @Input() data:any;
   @Input() public set selectedIndex(value) {
     this.activeIndex = value || 0;
   }

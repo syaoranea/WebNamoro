@@ -1,9 +1,11 @@
-<div class="bgnew">
+<div class="bgnew" >
+
+   <app-loading></app-loading>
    <app-progress #progress (stateChange)="onStateChange($event)" >
           
       <app-progress-step >
         
-            <div class="form">
+            <form class="form" [formGroup]="formulario" >
                <div class="question">
                   <h1>Oi, vamos começar.<br>
                      Qual seu nome?
@@ -11,7 +13,7 @@
                </div>
                <div class="answer">
                   <div class="form-answer">
-                     <input class="form__input birth-date-step-input" id="birthday" placeholder="Digite seu nome" type="text"
+                     <input class="form__input " id="nome" placeholder="Digite seu nome" type="text"
                         data-testid="birthday" formControlName="nome">
                      <label for="name" class="form__label">Digite seu nome</label>
                   </div>
@@ -20,11 +22,11 @@
                         color="ctaPrimary" (click)="goNext(progress)">Pronto</button>
                   </div>
                </div>
-            </div>
+            </form>
         
       </app-progress-step>
       <app-progress-step>
-         <div class="form">
+         <form class="form" [formGroup]="formulario" >
             <div class="question">
                <h1>Agora,<br>
                   Quando é seu aniversário?
@@ -32,8 +34,8 @@
             </div>
             <div class="answer">
                <div class="form-answer">
-                  <input class="form__input birth-date-step-input" id="birthday" placeholder="DD/MM/AAAA" type="text"
-                     data-testid="birthday" formControlName="dataNascimento">
+                  <input class="form__input " id="dataNascimento" placeholder="DD/MM/AAAA" type="text"
+                     formControlName="dataNascimento">
                   <label for="name" class="form__label">DD/MM/AAAA</label>
                </div>
                <div class="btn-answer">
@@ -41,10 +43,10 @@
                      color="ctaPrimary" (click)="goNext(progress)">Pronto</button>
                </div>
             </div>
-         </div>
+         </form>
       </app-progress-step>
       <app-progress-step >
-         <div class="form">
+         <form class="form" [formGroup]="formulario" >
             <div class="question">
                <h1>Quase lá.<br>
                   Qual seu e-mail?
@@ -52,8 +54,8 @@
             </div>
             <div class="answer">
                <div class="form-answer">
-                  <input class="form__input birth-date-step-input" id="birthday" placeholder="Digite seu email" type="text"
-                     data-testid="birthday" formControlName="email">
+                  <input class="form__input " id="email" placeholder="Digite seu email" type="text"
+                     formControlName="email" >
                   <label for="name" class="form__label">Digite seu email</label>
                </div>
                <div class="btn-answer">
@@ -61,10 +63,10 @@
                      color="ctaPrimary" (click)="goNext(progress)">Pronto</button>
                </div>
             </div>
-         </div>
+         </form>
       </app-progress-step>
       <app-progress-step>
-         <div class="form">
+         <form class="form" [formGroup]="formulario" >
             <div class="question">
                <h1>Agora,<br>
                  crie uma senha.
@@ -72,18 +74,19 @@
             </div>
             <div class="answer">
                <div class="form-answer">
-                  <input class="form__input birth-date-step-input" id="birthday" placeholder="crie uma senha." type="text"
-                     data-testid="birthday" formControlName="senha">
+                  <input class="form__input " id="senha" placeholder="crie uma senha." type="text"
+                     formControlName="senha" >
                   <label for="name" class="form__label">crie uma senha.</label>
                </div>
                <div class="btn-answer">
                   <button role="button" data-uia-button-disabled="false" class="btn arrow" type="submit" data-testid="advance"
-                     color="ctaPrimary" (click)="goNext(progress)">Pronto</button>
+                     color="ctaPrimary" (click)="goSubmit()">Pronto</button>
                </div>
             </div>
-         </div>
+         </form>
       </app-progress-step>
       
 
    </app-progress>
+
 </div>
