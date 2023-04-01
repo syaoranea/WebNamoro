@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { StateService } from '@uirouter/angular';
 
 @Component({
   selector: 'app-menu-responsivel',
@@ -8,9 +9,16 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MenuResponsivelComponent implements OnInit {
 
   @Input() menuList: string[];
-  constructor() { }
+  constructor(
+    private  stateService: StateService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  goToRegistrar(){
+    console.log('click');
+    
+    this.stateService.go("cadastro", {}, {location: false})
+  }
 }

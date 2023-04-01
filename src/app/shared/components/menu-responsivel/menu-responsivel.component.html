@@ -1,5 +1,5 @@
 <div class="menuResponsivo">
     <ul>
-        <li *ngFor="let menu of menuList"><a class="link-underline-menu" href="#">{{menu }}</a> </li>
+        <li *ngFor="let menu of menuList" ><a class="link-underline-menu" (click)="goToRegistrar()">   {{ menu }} </a></li>
     </ul>
 </div>
