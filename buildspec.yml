@@ -9,12 +9,12 @@ phases:
   installs:
     runtime-versions:
       nodejs: 14
-  comands:
+  commands:
     - echo Installing source NPW dependencie
     - npm install
     - npm install -g @angular/cli
 build:
-  comands:
+  commands:
     - echo Build started
     - ng build
 artifacts:
