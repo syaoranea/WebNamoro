@@ -6,7 +6,8 @@ import { PathLocationStrategy } from "@angular/common";
 
 export const environment = {
   production: false,
-  locationStrategy: PathLocationStrategy
+  locationStrategy: PathLocationStrategy,
+  baseUrl: 'http://localhost:8081/imagens',
 };
 
 /*
