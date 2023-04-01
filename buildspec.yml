@@ -10,7 +10,7 @@ phases:
     commands:
       - echo Installing source NPM dependencies...
       - npm install --legacy-peer-deps
-      - npm install -g @angular/cli
+      - npm install -g @angular/cli@13
   build:
     commands:
       - echo Build started on `date`
